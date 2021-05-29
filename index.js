@@ -9,6 +9,7 @@ app.engine(
     extname: "hbs",
   })
 );
+app.use(express.static('public'))
 
 app.set("view engine", "hbs");
 
