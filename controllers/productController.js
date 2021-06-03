@@ -3,7 +3,8 @@ const productServece = require("../services/productService");
 const router = Router();
 
 router.get("/", (req, res) => {
-  res.render("home", { title: "Browse" });
+  let products = productServece.getAll();
+  res.render("home", { title: "Browse", products});
 });
 
 router.get("/create", (req, res) => {
